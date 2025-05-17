@@ -6,20 +6,6 @@
 * cmake
 * rg
 * fd
-* packer nvim
+* lazy.nvim
 
 ## install
-
-
-```bash
-# maybe needed to rename after
-mv after _after
-open `nvim ./lua/lcavalcante/packer.lua`
-mv _after after
-```
-
-```vim
-:so
-:PackerSync
-```
-

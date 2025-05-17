@@ -11,6 +11,14 @@ local lsp_key_map = augroup('lspkeymap', {})
 autocmd('LspAttach', {
     group = lsp_key_map,
     callback = function(e)
+        local client = vim.lsp.get_client_by_id(e.data.client_id)
+        if client == nil then
+            return
+        end
+        if client.name == "ruff" then
+            client.server_capabilities.hoverProvider = False
+        end
+
         local opts = { buffer = e.buf }
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
