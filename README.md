@@ -6,20 +6,33 @@
 * cmake
 * rg
 * fd
-* packer nvim
+* lazy.nvim
+* luarocks
+* lua 5.1
+* Node (22)
+* python 3.12
+* * python 3.12-venv
 
 ## install
 
-
 ```bash
-# maybe needed to rename after
-mv after _after
-open `nvim ./lua/lcavalcante/packer.lua`
-mv _after after
+git clone git@github.com:lcavalcante/nvim.init.git ${HOME}/.config/nvim
+
+
+nvim
 ```
 
 ```vim
-:so
-:PackerSync
+:Mason
+
+install pyright, ruff, lua_ls
 ```
 
+## verify
+
+inside nvim
+
+```vim
+:checkhealth lazy
+:checkhealth lsp
+```
