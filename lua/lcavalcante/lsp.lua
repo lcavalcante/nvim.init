@@ -1,13 +1,16 @@
 vim.lsp.enable('lua_ls')
 
---python
+-- python
 vim.lsp.enable('pyright')
 vim.lsp.config('pyright', {
     settings = {
         pyright = {
-          -- Using Ruff's import organizer
-          disableOrganizeImports = true,
+            -- Using Ruff's import organizer
+            disableOrganizeImports = true,
         },
     },
 })
 vim.lsp.enable('ruff')
+
+-- zig
+vim.lsp.enable('zls')

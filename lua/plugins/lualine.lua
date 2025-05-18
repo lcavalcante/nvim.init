@@ -3,7 +3,7 @@ return {
     dependencies = {
         "SmiteshP/nvim-navic",
         "neovim/nvim-lspconfig",
-        "nvim-web-devicons"
+        "nvim-tree/nvim-web-devicons"
     },
 
     config = function ()
