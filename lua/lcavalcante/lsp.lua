@@ -1,10 +1,10 @@
 vim.lsp.enable('lua_ls')
 
 -- python
-vim.lsp.enable('pyright')
-vim.lsp.config('pyright', {
+vim.lsp.enable('basedpyright')
+vim.lsp.config('basedpyright', {
     settings = {
-        pyright = {
+        basedpyright = {
             -- Using Ruff's import organizer
             disableOrganizeImports = true,
         },
