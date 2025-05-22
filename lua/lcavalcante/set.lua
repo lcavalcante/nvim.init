@@ -4,6 +4,7 @@ vim.opt.showmatch = true  -- show matching
 vim.opt.ignorecase = true  -- case insensitive
 vim.opt.hlsearch = false  -- highlight search 
 vim.opt.incsearch = true  -- incremental search
+vim.opt.smartcase = true  -- no ignorecase if Uppercase char is present
 
 vim.opt.tabstop = 4  -- number of columns occupied by a tab 
 vim.opt.softtabstop = 4  -- see multiple spaces as tabstops so <BS> does the right thing
