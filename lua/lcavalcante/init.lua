@@ -6,8 +6,6 @@ local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 local lsp_key_map = augroup('lspkeymap', {})
 
-
-
 autocmd('LspAttach', {
     group = lsp_key_map,
     callback = function(e)
@@ -31,4 +29,9 @@ autocmd('LspAttach', {
         vim.keymap.set("n", "<leader>vn", function() vim.diagnostic.goto_next() end, opts)
         vim.keymap.set("n", "<leader>vp", function() vim.diagnostic.goto_prev() end, opts)
     end
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'py' },
+  callback = function() vim.treesitter.start() end,
 })
